@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C40ED0581DA0425B003131E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED0571DA0425B003131E6 /* AppDelegate.swift */; };
+		C40ED05A1DA0425B003131E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED0591DA0425B003131E6 /* ViewController.swift */; };
+		C40ED05D1DA0425B003131E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40ED05B1DA0425B003131E6 /* Main.storyboard */; };
+		C40ED0601DA0425B003131E6 /* HalloweenHunt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C40ED05E1DA0425B003131E6 /* HalloweenHunt.xcdatamodeld */; };
+		C40ED0621DA0425B003131E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40ED0611DA0425B003131E6 /* Assets.xcassets */; };
+		C40ED0651DA0425B003131E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40ED0631DA0425B003131E6 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C40ED0541DA0425B003131E6 /* HalloweenHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalloweenHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40ED0571DA0425B003131E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C40ED0591DA0425B003131E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C40ED05C1DA0425B003131E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C40ED05F1DA0425B003131E6 /* HalloweenHunt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HalloweenHunt.xcdatamodel; sourceTree = "<group>"; };
+		C40ED0611DA0425B003131E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C40ED0641DA0425B003131E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C40ED0661DA0425B003131E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C40ED0511DA0425B003131E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C40ED04B1DA0425B003131E6 = {
+			isa = PBXGroup;
+			children = (
+				C40ED0561DA0425B003131E6 /* HalloweenHunt */,
+				C40ED0551DA0425B003131E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C40ED0551DA0425B003131E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C40ED0541DA0425B003131E6 /* HalloweenHunt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C40ED0561DA0425B003131E6 /* HalloweenHunt */ = {
+			isa = PBXGroup;
+			children = (
+				C40ED0571DA0425B003131E6 /* AppDelegate.swift */,
+				C40ED0591DA0425B003131E6 /* ViewController.swift */,
+				C40ED05B1DA0425B003131E6 /* Main.storyboard */,
+				C40ED0611DA0425B003131E6 /* Assets.xcassets */,
+				C40ED0631DA0425B003131E6 /* LaunchScreen.storyboard */,
+				C40ED0661DA0425B003131E6 /* Info.plist */,
+				C40ED05E1DA0425B003131E6 /* HalloweenHunt.xcdatamodeld */,
+			);
+			path = HalloweenHunt;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C40ED0531DA0425B003131E6 /* HalloweenHunt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C40ED0691DA0425B003131E6 /* Build configuration list for PBXNativeTarget "HalloweenHunt" */;
+			buildPhases = (
+				C40ED0501DA0425B003131E6 /* Sources */,
+				C40ED0511DA0425B003131E6 /* Frameworks */,
+				C40ED0521DA0425B003131E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HalloweenHunt;
+			productName = HalloweenHunt;
+			productReference = C40ED0541DA0425B003131E6 /* HalloweenHunt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C40ED04C1DA0425B003131E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Dumb Blonde Software";
+				TargetAttributes = {
+					C40ED0531DA0425B003131E6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = K8633K44E8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C40ED04F1DA0425B003131E6 /* Build configuration list for PBXProject "HalloweenHunt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C40ED04B1DA0425B003131E6;
+			productRefGroup = C40ED0551DA0425B003131E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C40ED0531DA0425B003131E6 /* HalloweenHunt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C40ED0521DA0425B003131E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C40ED0651DA0425B003131E6 /* LaunchScreen.storyboard in Resources */,
+				C40ED0621DA0425B003131E6 /* Assets.xcassets in Resources */,
+				C40ED05D1DA0425B003131E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C40ED0501DA0425B003131E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C40ED05A1DA0425B003131E6 /* ViewController.swift in Sources */,
+				C40ED0601DA0425B003131E6 /* HalloweenHunt.xcdatamodeld in Sources */,
+				C40ED0581DA0425B003131E6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C40ED05B1DA0425B003131E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C40ED05C1DA0425B003131E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C40ED0631DA0425B003131E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C40ED0641DA0425B003131E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C40ED0671DA0425B003131E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C40ED0681DA0425B003131E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C40ED06A1DA0425B003131E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K8633K44E8;
+				INFOPLIST_FILE = HalloweenHunt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.diane.HalloweenHunt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C40ED06B1DA0425B003131E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K8633K44E8;
+				INFOPLIST_FILE = HalloweenHunt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.diane.HalloweenHunt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C40ED04F1DA0425B003131E6 /* Build configuration list for PBXProject "HalloweenHunt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C40ED0671DA0425B003131E6 /* Debug */,
+				C40ED0681DA0425B003131E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C40ED0691DA0425B003131E6 /* Build configuration list for PBXNativeTarget "HalloweenHunt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C40ED06A1DA0425B003131E6 /* Debug */,
+				C40ED06B1DA0425B003131E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C40ED05E1DA0425B003131E6 /* HalloweenHunt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C40ED05F1DA0425B003131E6 /* HalloweenHunt.xcdatamodel */,
+			);
+			currentVersion = C40ED05F1DA0425B003131E6 /* HalloweenHunt.xcdatamodel */;
+			path = HalloweenHunt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C40ED04C1DA0425B003131E6 /* Project object */;
+}
