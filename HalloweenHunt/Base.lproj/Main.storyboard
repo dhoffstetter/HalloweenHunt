@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="HalloweenHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-Ps-gcH">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivR-l3-a2a">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-2h-KOY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8u8-Te-BN1"/>
+                                </constraints>
+                                <state key="normal" title="Happy Haunting!"/>
+                                <connections>
+                                    <action selector="hauntingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="siT-1z-Rtg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHY-ad-1LA">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BtO-Ps-gcH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="0O9-ve-Cnp"/>
+                            <constraint firstItem="mHY-ad-1LA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="3DI-LI-oOb"/>
+                            <constraint firstItem="mHY-ad-1LA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="4Km-3c-MHW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BtO-Ps-gcH" secondAttribute="trailing" constant="20" id="LdL-mC-HVC"/>
+                            <constraint firstItem="BTn-2h-KOY" firstAttribute="top" secondItem="ivR-l3-a2a" secondAttribute="bottom" constant="30" id="O74-AS-SoV"/>
+                            <constraint firstItem="ivR-l3-a2a" firstAttribute="top" secondItem="BtO-Ps-gcH" secondAttribute="bottom" constant="48" id="OBY-7A-l4b"/>
+                            <constraint firstItem="ivR-l3-a2a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="PwL-xj-8Lm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mHY-ad-1LA" secondAttribute="trailing" constant="20" id="RB4-1y-Ptp"/>
+                            <constraint firstItem="BTn-2h-KOY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBa-Ss-cz7"/>
+                            <constraint firstItem="ivR-l3-a2a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sj9-WV-Jt3"/>
+                            <constraint firstItem="BtO-Ps-gcH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VIs-0R-1T6"/>
+                            <constraint firstItem="BtO-Ps-gcH" firstAttribute="top" secondItem="mHY-ad-1LA" secondAttribute="bottom" constant="48" id="k1M-o8-Bw3"/>
+                            <constraint firstItem="mHY-ad-1LA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tl3-bK-xVY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ivR-l3-a2a" secondAttribute="trailing" constant="20" id="yDF-VM-j96"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="mHY-ad-1LA" id="dXg-KL-DHt"/>
+                        <outlet property="passwordTextField" destination="BtO-Ps-gcH" id="PKJ-RH-2Zx"/>
+                        <outlet property="userNameTextField" destination="ivR-l3-a2a" id="2B9-xu-kfJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="193" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FPE-SR-3DD">
+            <objects>
+                <viewController id="Fls-t7-ZwO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8m-S7-XEj"/>
+                        <viewControllerLayoutGuide type="bottom" id="7GA-2O-fpL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iMG-HI-Cvk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtL-qK-Tx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mqA-RX-46K">
+            <objects>
+                <viewController id="Ylj-uc-j4v" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BWu-Ti-TrC"/>
+                        <viewControllerLayoutGuide type="bottom" id="cmb-KW-aBf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="edj-cs-VGE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWB-OZ-uz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="890"/>
         </scene>
     </scenes>
 </document>
