@@ -54,9 +54,17 @@ class LogInViewController: UIViewController {
         
         let alert = UIAlertController(title: "Master!", message: "Do you want to master the game?", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Yes!", style: UIAlertActionStyle.default, handler: {
-          (action) -> Void in print("Yes!")
+          (action) -> Void in
+          
+          self.performSegue(withIdentifier: "logInToMasterSegue", sender: self)
+          
         }))
-        alert.addAction(UIAlertAction(title: "Nope.", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Nope.", style: UIAlertActionStyle.default, handler: {
+          (action) -> Void in
+            
+            self.performSegue(withIdentifier: "logInToMapSegue", sender: self)
+            
+        }))
         self.present(alert, animated : true, completion: nil)
 
       }
@@ -75,4 +83,5 @@ class LogInViewController: UIViewController {
   }
 
 }
+
 

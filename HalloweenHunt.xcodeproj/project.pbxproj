@@ -13,6 +13,10 @@
 		C40ED0601DA0425B003131E6 /* HalloweenHunt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C40ED05E1DA0425B003131E6 /* HalloweenHunt.xcdatamodeld */; };
 		C40ED0621DA0425B003131E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40ED0611DA0425B003131E6 /* Assets.xcassets */; };
 		C40ED0651DA0425B003131E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40ED0631DA0425B003131E6 /* LaunchScreen.storyboard */; };
+		C40ED06D1DA05CB3003131E6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED06C1DA05CB3003131E6 /* MapViewController.swift */; };
+		C40ED06F1DA05CC0003131E6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED06E1DA05CC0003131E6 /* MasterViewController.swift */; };
+		C40ED0731DA060F0003131E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40ED0721DA060F0003131E6 /* MapKit.framework */; };
+		C40ED0751DA0638E003131E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C40ED0741DA0638E003131E6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C40ED0611DA0425B003131E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C40ED0641DA0425B003131E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C40ED0661DA0425B003131E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C40ED06C1DA05CB3003131E6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C40ED06E1DA05CC0003131E6 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		C40ED0721DA060F0003131E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C40ED0741DA0638E003131E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40ED0731DA060F0003131E6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 			children = (
 				C40ED0561DA0425B003131E6 /* HalloweenHunt */,
 				C40ED0551DA0425B003131E6 /* Products */,
+				C40ED0711DA060EF003131E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +67,33 @@
 			isa = PBXGroup;
 			children = (
 				C40ED0571DA0425B003131E6 /* AppDelegate.swift */,
-				C40ED0591DA0425B003131E6 /* LogInViewController.swift */,
+				C40ED0701DA05CE8003131E6 /* VC */,
 				C40ED05B1DA0425B003131E6 /* Main.storyboard */,
 				C40ED0611DA0425B003131E6 /* Assets.xcassets */,
 				C40ED0631DA0425B003131E6 /* LaunchScreen.storyboard */,
 				C40ED0661DA0425B003131E6 /* Info.plist */,
+				C40ED0741DA0638E003131E6 /* GoogleService-Info.plist */,
 				C40ED05E1DA0425B003131E6 /* HalloweenHunt.xcdatamodeld */,
 			);
 			path = HalloweenHunt;
+			sourceTree = "<group>";
+		};
+		C40ED0701DA05CE8003131E6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C40ED0591DA0425B003131E6 /* LogInViewController.swift */,
+				C40ED06C1DA05CB3003131E6 /* MapViewController.swift */,
+				C40ED06E1DA05CC0003131E6 /* MasterViewController.swift */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		C40ED0711DA060EF003131E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C40ED0721DA060F0003131E6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40ED0651DA0425B003131E6 /* LaunchScreen.storyboard in Resources */,
+				C40ED0751DA0638E003131E6 /* GoogleService-Info.plist in Resources */,
 				C40ED0621DA0425B003131E6 /* Assets.xcassets in Resources */,
 				C40ED05D1DA0425B003131E6 /* Main.storyboard in Resources */,
 			);
@@ -140,9 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40ED06F1DA05CC0003131E6 /* MasterViewController.swift in Sources */,
 				C40ED05A1DA0425B003131E6 /* LogInViewController.swift in Sources */,
 				C40ED0601DA0425B003131E6 /* HalloweenHunt.xcdatamodeld in Sources */,
 				C40ED0581DA0425B003131E6 /* AppDelegate.swift in Sources */,
+				C40ED06D1DA05CB3003131E6 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +338,7 @@
 				C40ED06B1DA0425B003131E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -66,16 +66,18 @@
                         <outlet property="emailTextField" destination="mHY-ad-1LA" id="dXg-KL-DHt"/>
                         <outlet property="passwordTextField" destination="BtO-Ps-gcH" id="PKJ-RH-2Zx"/>
                         <outlet property="userNameTextField" destination="ivR-l3-a2a" id="2B9-xu-kfJ"/>
+                        <segue destination="Fls-t7-ZwO" kind="show" identifier="logInToMapSegue" id="wdR-V7-RNY"/>
+                        <segue destination="Ylj-uc-j4v" kind="show" identifier="logInToMasterSegue" id="lPe-nZ-Ess"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="193" y="136"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="FPE-SR-3DD">
             <objects>
-                <viewController id="Fls-t7-ZwO" sceneMemberID="viewController">
+                <viewController id="Fls-t7-ZwO" customClass="MapViewController" customModule="HalloweenHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z8m-S7-XEj"/>
                         <viewControllerLayoutGuide type="bottom" id="7GA-2O-fpL"/>
@@ -83,17 +85,29 @@
                     <view key="view" contentMode="scaleToFill" id="iMG-HI-Cvk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="72V-hO-eeJ"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="72V-hO-eeJ" secondAttribute="trailing" id="1fe-eN-ZVW"/>
+                            <constraint firstItem="7GA-2O-fpL" firstAttribute="top" secondItem="72V-hO-eeJ" secondAttribute="bottom" id="fU1-l0-X9j"/>
+                            <constraint firstItem="72V-hO-eeJ" firstAttribute="top" secondItem="iMG-HI-Cvk" secondAttribute="top" id="isL-fM-5wF"/>
+                            <constraint firstItem="72V-hO-eeJ" firstAttribute="leading" secondItem="iMG-HI-Cvk" secondAttribute="leading" id="uMb-6Q-F6Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="72V-hO-eeJ" id="jIs-T0-oME"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtL-qK-Tx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="137"/>
+            <point key="canvasLocation" x="944.79999999999995" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Master View Controller-->
         <scene sceneID="mqA-RX-46K">
             <objects>
-                <viewController id="Ylj-uc-j4v" sceneMemberID="viewController">
+                <viewController id="Ylj-uc-j4v" customClass="MasterViewController" customModule="HalloweenHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BWu-Ti-TrC"/>
                         <viewControllerLayoutGuide type="bottom" id="cmb-KW-aBf"/>
