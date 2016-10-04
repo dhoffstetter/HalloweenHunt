@@ -67,7 +67,7 @@
                         <outlet property="passwordTextField" destination="BtO-Ps-gcH" id="PKJ-RH-2Zx"/>
                         <outlet property="userNameTextField" destination="ivR-l3-a2a" id="2B9-xu-kfJ"/>
                         <segue destination="Fls-t7-ZwO" kind="show" identifier="logInToMapSegue" id="wdR-V7-RNY"/>
-                        <segue destination="Ylj-uc-j4v" kind="show" identifier="logInToMasterSegue" id="lPe-nZ-Ess"/>
+                        <segue destination="vau-zH-sX6" kind="show" identifier="logInToMasterSegue" id="lPe-nZ-Ess"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,7 +86,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="72V-hO-eeJ"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="72V-hO-eeJ">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -115,12 +117,55 @@
                     <view key="view" contentMode="scaleToFill" id="edj-cs-VGE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ywv-7f-2i7">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HaunterCell" id="mnb-3V-zzE">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mnb-3V-zzE" id="CoS-DD-p9e">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cmb-KW-aBf" firstAttribute="top" secondItem="Ywv-7f-2i7" secondAttribute="bottom" id="3hE-9Y-FBb"/>
+                            <constraint firstAttribute="trailing" secondItem="Ywv-7f-2i7" secondAttribute="trailing" id="Nrx-Mr-89C"/>
+                            <constraint firstItem="Ywv-7f-2i7" firstAttribute="top" secondItem="edj-cs-VGE" secondAttribute="top" id="SCf-bn-4La"/>
+                            <constraint firstItem="Ywv-7f-2i7" firstAttribute="leading" secondItem="edj-cs-VGE" secondAttribute="leading" id="acD-WK-BHI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pPa-Q1-r4R"/>
+                    <connections>
+                        <outlet property="haunterTableView" destination="Ywv-7f-2i7" id="SWK-C0-iD2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWB-OZ-uz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="890"/>
+            <point key="canvasLocation" x="1884" y="889.20539730134942"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bRj-08-W41">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vau-zH-sX6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M5S-u2-9QM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ylj-uc-j4v" kind="relationship" relationship="rootViewController" id="n6S-4H-Kxc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7I-vE-RKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.79999999999995" y="889.20539730134942"/>
         </scene>
     </scenes>
 </document>

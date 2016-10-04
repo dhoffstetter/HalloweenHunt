@@ -8,12 +8,28 @@
 
 import UIKit
 
-class MasterViewController: UIViewController {
+class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+  @IBOutlet weak var haunterTableView: UITableView!
+  
+  var haunters : [Haunter] = []
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      
+      haunterTableView.delegate = self
+      haunterTableView.dataSource = self
+      
+      let haunter1 = Haunter()
+      haunter1.name = "bob"
+      haunters.append(haunter1)
+      let haunter2 = Haunter()
+      haunter2.name = "betty"
+      haunters.append(haunter2)
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +37,23 @@ class MasterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    return haunters.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "HaunterCell")
+    
+    cell.textLabel?.text = haunters[indexPath.row].name
+    
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    
+  }
 
 }

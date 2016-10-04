@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class LogInViewController: UIViewController {
 
@@ -50,29 +53,80 @@ class LogInViewController: UIViewController {
     }
     else {
       
-      if isMaster {
-        
-        let alert = UIAlertController(title: "Master!", message: "Do you want to master the game?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Yes!", style: UIAlertActionStyle.default, handler: {
-          (action) -> Void in
+      FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+        print("*************************************************We tried to sign in.")
+        if error != nil {
+          print("We have an error : \(error)")
           
-          self.performSegue(withIdentifier: "logInToMasterSegue", sender: self)
-          
-        }))
-        alert.addAction(UIAlertAction(title: "Nope.", style: UIAlertActionStyle.default, handler: {
-          (action) -> Void in
+          FIRAuth.auth()?.createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+            print("We tried to create a user")
             
-            self.performSegue(withIdentifier: "logInToMapSegue", sender: self)
-            
-        }))
-        self.present(alert, animated : true, completion: nil)
+            if error != nil {
+              
+              print("***************************************We have an error : \(error)")
+              let alert = UIAlertController(title: "Drat!", message: "Zombies have taken over the network. Try again later", preferredStyle: UIAlertControllerStyle.alert)
+              alert.addAction(UIAlertAction(title: "Bummer", style: UIAlertActionStyle.default, handler: nil))
+              self.present(alert, animated : true, completion: nil)
 
-      }
+            }
+            else {
+              
+              print("Created User successfully!")
+              
+              FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email)
+              FIRDatabase.database().reference().child("users").child(user!.uid).child("username").setValue(self.userNameTextField.text)
+              
+              self.letsMoveOn()
+              
+            }
+          })
+          
+        }
+        else {
+          print("Signed in successfully!")
+          
+          self.letsMoveOn()
+        }
+      })
+
+    }
+    
+  }
+  
+  func letsMoveOn() -> Void {
+    
+    if isMaster {
       
+      letTheMasterDecide()
+    }
+    else {
+      
+      self.performSegue(withIdentifier: "logInToMapSegue", sender: nil)
     }
     
   }
 
+  func letTheMasterDecide() -> Void {
+    
+    if isMaster {
+      
+      let alert = UIAlertController(title: "Master!", message: "Do you want to master the game?", preferredStyle: UIAlertControllerStyle.alert)
+      alert.addAction(UIAlertAction(title: "Yes!", style: UIAlertActionStyle.default, handler: {
+        (action) -> Void in
+        
+        self.performSegue(withIdentifier: "logInToMasterSegue", sender: self)
+        
+      }))
+      alert.addAction(UIAlertAction(title: "Nope.", style: UIAlertActionStyle.default, handler: {
+        (action) -> Void in
+        
+        self.performSegue(withIdentifier: "logInToMapSegue", sender: self)
+        
+      }))
+      self.present(alert, animated : true, completion: nil)
+      
+    }
+  }
   
   func isNonWhiteSpaceString(str : String) -> Bool  {
     if str.trimmingCharacters(in: NSCharacterSet.whitespaces) != "" {
