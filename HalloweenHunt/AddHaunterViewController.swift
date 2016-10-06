@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseAuth
 
-class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
   @IBOutlet weak var haunterNameTextField: UITextField!
   @IBOutlet weak var latitudeSlider: UISlider!
@@ -28,6 +32,7 @@ class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPicker
       
       ownerPicker.dataSource = self
       ownerPicker.delegate = self
+      haunterNameTextField.delegate = self
       
       let player1 = Player()
       player1.email = "diane@dbx.com"
@@ -54,6 +59,14 @@ class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPicker
       let longW = longNom - 0.5
       let longE = longNom + 0.5
       
+      latitudeSlider.minimumValue = Float(latS)
+      latitudeSlider.maximumValue = Float(latN)
+      latitudeSlider.value = Float(latNom)
+      latitudeLabel.text = String(latNom)
+      longitudeSlider.minimumValue = Float(longW)
+      longitudeSlider.maximumValue = Float(longE)
+      longitudeSlider.value = Float(longNom)
+      longitudeLabel.text = String(longNom)
       
     }
 
@@ -63,6 +76,28 @@ class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
   
   @IBAction func addHaunterButtonPressed(_ sender: AnyObject) {
+    
+    if haunterNameTextField.text?.trimmingCharacters(in: NSCharacterSet.whitespaces) != "" {
+      
+      let row = ownerPicker.selectedRow(inComponent: 0)
+      let owner = players[row].userName
+      let haunter = ["name":haunterNameTextField.text!,"latitude":latitudeSlider.value,"longitude":longitudeSlider.value,"isVisible":isVisibleSwitch.isOn,"owner":owner] as [String : Any]
+      
+//      let haunter = ["name":haunterNameTextField.text,"latitude":latitudeSlider.value,"longitude":longitudeSlider.value,"isVisible":isVisibleSwitch.isOn,"owner":owner] as [String : Any]
+      
+      FIRDatabase.database().reference().child("haunters").childByAutoId().setValue(haunter)
+      
+//      FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+
+      self.navigationController!.popToRootViewController(animated: true)
+    }
+    else {
+      
+      let alert = UIAlertController(title: "Yo!", message: "Give the Ghoul a Name!", preferredStyle: UIAlertControllerStyle.alert)
+      alert.addAction(UIAlertAction(title: "Duh!", style: UIAlertActionStyle.default, handler: nil))
+      self.present(alert, animated : true, completion: nil)
+    }
+    
   }
   
   // UIPicker
@@ -77,6 +112,33 @@ class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPicker
   
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     return players[row].userName
+  }
+  
+  // UISlider
+  
+  @IBAction func latSliderChanged(_ sender: AnyObject) {
+    
+    latitudeLabel.text = String(latitudeSlider.value)
+  }
+
+  @IBAction func longSliderChanged(_ sender: AnyObject) {
+    
+    longitudeLabel.text = String(longitudeSlider.value)
+  }
+  
+  // UITextField
+  
+  // Called when 'return' key pressed. return NO to ignore.
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  
+  // Called when the user click on the view (outside the UITextField).
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
   }
 
 

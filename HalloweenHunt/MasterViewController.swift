@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,14 +25,26 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
       
       haunterTableView.delegate = self
       haunterTableView.dataSource = self
-      
+
+      /*
       let haunter1 = Haunter()
       haunter1.name = "bob"
       haunters.append(haunter1)
       let haunter2 = Haunter()
       haunter2.name = "betty"
       haunters.append(haunter2)
-     
+*/      
+      FIRDatabase.database().reference().child("haunters").observe(FIRDataEventType.childAdded, with: {(snapshot) in
+        
+        print(snapshot)
+        
+        let haunter = Haunter()
+        haunter.name = (snapshot.value! as AnyObject)["name"] as! String
+        
+        self.haunters.append(haunter)
+        self.haunterTableView.reloadData()
+      })
+
     }
 
     override func didReceiveMemoryWarning() {
