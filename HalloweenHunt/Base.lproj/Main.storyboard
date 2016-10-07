@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -136,6 +137,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pPa-Q1-r4R">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Reload" id="CZZ-a6-wv3">
+                                <connections>
+                                    <action selector="reloadButtonPressed:" destination="Ylj-uc-j4v" id="nX4-ro-Dlb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Wipeout" id="ZNk-m2-chb">
+                                <connections>
+                                    <action selector="wipeoutButtonPressed:" destination="Ylj-uc-j4v" id="Wkj-Tb-PGG"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FeE-uA-CBh">
                             <connections>
                                 <segue destination="Vye-e0-her" kind="show" identifier="masterToAddHaunter" id="imW-qc-ekj"/>
@@ -174,6 +187,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="3eR-tA-VnS"/>
                                     <constraint firstAttribute="height" constant="31" id="b4T-8Q-oqv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6n-4q-jRY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="aiz-Db-Fop"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="bJ0-Ka-Fpw"/>
+                                    <constraint firstAttribute="width" constant="100" id="mw2-vb-TtM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="s80-jU-4TD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -262,19 +286,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zYh-e6-hu3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="XDV-mj-UFc"/>
+                                    <constraint firstAttribute="width" constant="49" id="pS0-yv-ONT"/>
+                                </constraints>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zmg-B1-GQZ" firstAttribute="top" secondItem="gIH-q0-pNZ" secondAttribute="bottom" constant="20" id="0cg-nV-qFN"/>
                             <constraint firstItem="FlW-eg-A62" firstAttribute="leading" secondItem="9DI-4H-qph" secondAttribute="leadingMargin" constant="20" id="3KY-PT-tne"/>
                             <constraint firstItem="gfX-7Y-JQ5" firstAttribute="leading" secondItem="9DI-4H-qph" secondAttribute="leadingMargin" constant="20" id="44h-yn-y7E"/>
-                            <constraint firstItem="XTb-UD-EY3" firstAttribute="top" secondItem="S2G-sh-Z1y" secondAttribute="bottom" constant="50" id="6Jl-bF-17L"/>
+                            <constraint firstItem="XTb-UD-EY3" firstAttribute="top" secondItem="S2G-sh-Z1y" secondAttribute="bottom" constant="80" id="6Jl-bF-17L"/>
                             <constraint firstItem="G68-55-lBd" firstAttribute="top" secondItem="VDJ-F5-b2c" secondAttribute="bottom" constant="20" id="7oE-Qp-hsf"/>
                             <constraint firstItem="gIH-q0-pNZ" firstAttribute="top" secondItem="FlW-eg-A62" secondAttribute="bottom" constant="20" id="9VL-rm-ezM"/>
                             <constraint firstItem="V17-Jr-KWU" firstAttribute="leading" secondItem="USy-c1-7jp" secondAttribute="trailing" id="CE4-of-Z1j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gIH-q0-pNZ" secondAttribute="trailing" constant="10" id="CXw-9Y-TVr"/>
+                            <constraint firstItem="g6n-4q-jRY" firstAttribute="leading" secondItem="9DI-4H-qph" secondAttribute="leadingMargin" constant="20" id="Grx-cu-F3U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zmg-B1-GQZ" secondAttribute="trailing" constant="10" id="Ia5-bh-1Ni"/>
                             <constraint firstItem="uSh-pS-LUu" firstAttribute="leading" secondItem="9DI-4H-qph" secondAttribute="leadingMargin" constant="20" id="OY1-mG-qWE"/>
+                            <constraint firstItem="g6n-4q-jRY" firstAttribute="top" secondItem="S2G-sh-Z1y" secondAttribute="bottom" constant="20" id="P28-NL-Civ"/>
                             <constraint firstItem="S2G-sh-Z1y" firstAttribute="leading" secondItem="9DI-4H-qph" secondAttribute="leadingMargin" constant="20" id="Qbp-rL-Rwx"/>
                             <constraint firstItem="S2G-sh-Z1y" firstAttribute="top" secondItem="uSh-pS-LUu" secondAttribute="bottom" constant="20" id="SP7-GM-Bs0"/>
                             <constraint firstItem="G68-55-lBd" firstAttribute="leading" secondItem="S2G-sh-Z1y" secondAttribute="trailing" id="T1u-xi-wDU"/>
@@ -286,9 +318,11 @@
                             <constraint firstItem="V17-Jr-KWU" firstAttribute="top" secondItem="FlW-eg-A62" secondAttribute="bottom" constant="20" id="gTQ-IU-CHp"/>
                             <constraint firstItem="USy-c1-7jp" firstAttribute="leading" secondItem="9DI-4H-qph" secondAttribute="leadingMargin" constant="20" id="gea-GU-5xG"/>
                             <constraint firstItem="XTb-UD-EY3" firstAttribute="leading" secondItem="9DI-4H-qph" secondAttribute="leadingMargin" constant="20" id="hWo-Mb-CSs"/>
+                            <constraint firstItem="zYh-e6-hu3" firstAttribute="top" secondItem="G68-55-lBd" secondAttribute="bottom" constant="21" id="haj-mr-mmh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FlW-eg-A62" secondAttribute="trailing" constant="20" id="hh0-Tf-uuL"/>
                             <constraint firstItem="uSh-pS-LUu" firstAttribute="top" secondItem="USy-c1-7jp" secondAttribute="bottom" constant="20" id="irz-SZ-vYe"/>
-                            <constraint firstItem="2Xj-VE-f6C" firstAttribute="top" secondItem="G68-55-lBd" secondAttribute="bottom" constant="20" id="jgo-YA-Sc1"/>
+                            <constraint firstItem="2Xj-VE-f6C" firstAttribute="top" secondItem="G68-55-lBd" secondAttribute="bottom" constant="50" id="jgo-YA-Sc1"/>
+                            <constraint firstItem="zYh-e6-hu3" firstAttribute="leading" secondItem="g6n-4q-jRY" secondAttribute="trailing" id="k4u-16-QFc"/>
                             <constraint firstItem="VDJ-F5-b2c" firstAttribute="top" secondItem="V17-Jr-KWU" secondAttribute="bottom" constant="20" id="r9u-Gm-25u"/>
                             <constraint firstItem="FlW-eg-A62" firstAttribute="top" secondItem="wAl-aE-7JY" secondAttribute="bottom" constant="20" id="yS9-e1-pgc"/>
                             <constraint firstItem="USy-c1-7jp" firstAttribute="top" secondItem="FlW-eg-A62" secondAttribute="bottom" constant="20" id="zh1-Fb-4BE"/>
@@ -296,6 +330,7 @@
                     </view>
                     <connections>
                         <outlet property="haunterNameTextField" destination="FlW-eg-A62" id="N4c-Lj-ly0"/>
+                        <outlet property="isFoundSwitch" destination="zYh-e6-hu3" id="ZAh-pr-Fx0"/>
                         <outlet property="isVisibleSwitch" destination="G68-55-lBd" id="kCo-RD-zCq"/>
                         <outlet property="latitudeLabel" destination="gIH-q0-pNZ" id="feD-L1-0RR"/>
                         <outlet property="latitudeSlider" destination="V17-Jr-KWU" id="djW-ua-K12"/>
@@ -306,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsS-t1-fOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="892.80359820089961"/>
+            <point key="canvasLocation" x="2700" y="892.6056338028169"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bRj-08-W41">

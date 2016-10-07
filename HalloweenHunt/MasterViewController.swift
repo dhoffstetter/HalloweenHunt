@@ -26,24 +26,27 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
       haunterTableView.delegate = self
       haunterTableView.dataSource = self
 
-      /*
-      let haunter1 = Haunter()
-      haunter1.name = "bob"
-      haunters.append(haunter1)
-      let haunter2 = Haunter()
-      haunter2.name = "betty"
-      haunters.append(haunter2)
-*/      
       FIRDatabase.database().reference().child("haunters").observe(FIRDataEventType.childAdded, with: {(snapshot) in
         
         print(snapshot)
         
         let haunter = Haunter()
         haunter.name = (snapshot.value! as AnyObject)["name"] as! String
+        haunter.key = snapshot.key
+
         
         self.haunters.append(haunter)
         self.haunterTableView.reloadData()
       })
+      
+      FIRDatabase.database().reference().child("haunters").observe(FIRDataEventType.childRemoved, with: {(snapshot) in
+        
+        print(snapshot)
+        
+        self.haunterTableView.reloadData()
+        
+      })
+
 
     }
 
@@ -52,6 +55,53 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+  @IBAction func reloadButtonPressed(_ sender: AnyObject) {
+    
+    let alert = UIAlertController(title: "Reload???", message: "Do you really want to reload Starters?", preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "Yes!", style: UIAlertActionStyle.default, handler: {
+      (action) -> Void in
+      
+      let starterHaunters = StarterHaunters()
+      
+      for starter in starterHaunters.starters {
+        
+        let haunter = ["name":starter.name,"latitude":starter.longitude,"longitude":starter.longitude,"isVisible":starter.isVisible,"isFound":starter.isFound,"owner":starter.owner] as [String : Any]
+        
+        FIRDatabase.database().reference().child("haunters").childByAutoId().setValue(haunter)
+      }
+      
+    }))
+    alert.addAction(UIAlertAction(title: "Nope.", style: UIAlertActionStyle.default, handler: {
+      (action) -> Void in
+      
+    }))
+    self.present(alert, animated : true, completion: nil)
+    
+  }
+  
+  @IBAction func wipeoutButtonPressed(_ sender: AnyObject) {
+    
+    let alert = UIAlertController(title: "Wipeout???", message: "Do you really want to wipe out the Haunters?", preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "Yes!", style: UIAlertActionStyle.default, handler: {
+      (action) -> Void in
+      
+      for losers in self.haunters {
+        
+        FIRDatabase.database().reference().child("haunters").child(losers.key).removeValue()
+      }
+      
+      self.haunters.removeAll()
+      
+    }))
+    alert.addAction(UIAlertAction(title: "Nope.", style: UIAlertActionStyle.default, handler: {
+      (action) -> Void in
+      
+    }))
+    self.present(alert, animated : true, completion: nil)
+
+  }
+  
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
     return haunters.count
@@ -68,7 +118,8 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    
   }
+  
+  
 
 }

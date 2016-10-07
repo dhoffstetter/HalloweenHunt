@@ -12,10 +12,12 @@ import UIKit
 class Haunter {
   
   var name = "default"
-  var longitude = 0
-  var latitude = 0
+  var latitude = 0.0
+  var longitude = 0.0
   var owner = "Master"
-  var found = false
+  var isFound = false
+  var isVisible = true
+  var key = ""
 //  var image = UIImage()
   
 }

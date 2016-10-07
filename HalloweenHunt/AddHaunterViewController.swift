@@ -20,6 +20,7 @@ class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPicker
   @IBOutlet weak var longitudeSlider: UISlider!
   @IBOutlet weak var longitudeLabel: UILabel!
   @IBOutlet weak var isVisibleSwitch: UISwitch!
+  @IBOutlet weak var isFoundSwitch: UISwitch!
   @IBOutlet weak var ownerPicker: UIPickerView!
   
   var players: [Player] = []
@@ -81,14 +82,10 @@ class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPicker
       
       let row = ownerPicker.selectedRow(inComponent: 0)
       let owner = players[row].userName
-      let haunter = ["name":haunterNameTextField.text!,"latitude":latitudeSlider.value,"longitude":longitudeSlider.value,"isVisible":isVisibleSwitch.isOn,"owner":owner] as [String : Any]
-      
-//      let haunter = ["name":haunterNameTextField.text,"latitude":latitudeSlider.value,"longitude":longitudeSlider.value,"isVisible":isVisibleSwitch.isOn,"owner":owner] as [String : Any]
+      let haunter = ["name":haunterNameTextField.text!,"latitude":latitudeSlider.value,"longitude":longitudeSlider.value,"isVisible":isVisibleSwitch.isOn,"isFound":isFoundSwitch.isOn,"owner":owner] as [String : Any]
       
       FIRDatabase.database().reference().child("haunters").childByAutoId().setValue(haunter)
       
-//      FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
-
       self.navigationController!.popToRootViewController(animated: true)
     }
     else {

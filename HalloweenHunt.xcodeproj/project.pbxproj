@@ -11,6 +11,7 @@
 		C40B44211DA3700900DC75D4 /* Haunter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B44201DA3700900DC75D4 /* Haunter.swift */; };
 		C40CBA9F1DA4B28100BFDC92 /* AddHaunterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CBA9E1DA4B28100BFDC92 /* AddHaunterViewController.swift */; };
 		C40CBAA11DA4BBF300BFDC92 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CBAA01DA4BBF300BFDC92 /* Player.swift */; };
+		C40CE7C51DA74CD6006E25CD /* StarterHaunters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CE7C41DA74CD6006E25CD /* StarterHaunters.swift */; };
 		C40ED0581DA0425B003131E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED0571DA0425B003131E6 /* AppDelegate.swift */; };
 		C40ED05A1DA0425B003131E6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED0591DA0425B003131E6 /* LogInViewController.swift */; };
 		C40ED05D1DA0425B003131E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40ED05B1DA0425B003131E6 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		C40B44201DA3700900DC75D4 /* Haunter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haunter.swift; sourceTree = "<group>"; };
 		C40CBA9E1DA4B28100BFDC92 /* AddHaunterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHaunterViewController.swift; sourceTree = "<group>"; };
 		C40CBAA01DA4BBF300BFDC92 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C40CE7C41DA74CD6006E25CD /* StarterHaunters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarterHaunters.swift; sourceTree = "<group>"; };
 		C40ED0541DA0425B003131E6 /* HalloweenHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalloweenHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40ED0571DA0425B003131E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C40ED0591DA0425B003131E6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				C40CBAA01DA4BBF300BFDC92 /* Player.swift */,
 				C40B44201DA3700900DC75D4 /* Haunter.swift */,
+				C40CE7C41DA74CD6006E25CD /* StarterHaunters.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				C40ED0601DA0425B003131E6 /* HalloweenHunt.xcdatamodeld in Sources */,
 				C40ED0581DA0425B003131E6 /* AppDelegate.swift in Sources */,
 				C40CBAA11DA4BBF300BFDC92 /* Player.swift in Sources */,
+				C40CE7C51DA74CD6006E25CD /* StarterHaunters.swift in Sources */,
 				C40ED06D1DA05CB3003131E6 /* MapViewController.swift in Sources */,
 				C40CBA9F1DA4B28100BFDC92 /* AddHaunterViewController.swift in Sources */,
 				C40B44211DA3700900DC75D4 /* Haunter.swift in Sources */,
