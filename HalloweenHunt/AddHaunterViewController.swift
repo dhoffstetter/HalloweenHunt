@@ -35,23 +35,37 @@ class AddHaunterViewController: UIViewController, UIPickerViewDelegate, UIPicker
       ownerPicker.delegate = self
       haunterNameTextField.delegate = self
       
+      FIRDatabase.database().reference().child("users").observe(FIRDataEventType.childAdded, with: {(snapshot) in
+        
+        print(snapshot)
+        
+        let player = Player()
+        player.userName = (snapshot.value! as AnyObject)["username"] as! String
+        player.key = snapshot.key
+        
+        self.players.append(player)
+        self.ownerPicker.reloadAllComponents()
+      })
+
+      /*
       let player1 = Player()
-      player1.email = "diane@dbx.com"
+      player1.email = "diane@dbs.com"
       player1.userName = "Diane"
       player1.isMaster = true
       players.append(player1)
       
       let player2 = Player()
-      player2.email = "dave@dbx.com"
+      player2.email = "dave@dbs.com"
       player2.userName = "Dave"
       player2.isMaster = true
       players.append(player2)
       
       let player3 = Player()
-      player3.email = "amanda@dbx.com"
+      player3.email = "amanda@dbs.com"
       player3.userName = "Amanda"
       player3.isMaster = false
       players.append(player3)
+      */
 
       let latNom = 37.2281
       let latN = latNom + 0.5

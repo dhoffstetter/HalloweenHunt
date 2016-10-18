@@ -14,5 +14,6 @@ class Player {
   var password = ""
   var userName = ""
   var isMaster = false
+  var key = ""
   
 }

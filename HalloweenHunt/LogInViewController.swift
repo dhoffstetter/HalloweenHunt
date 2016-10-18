@@ -23,7 +23,7 @@ class LogInViewController: UIViewController {
   var password = "password"
   var username = "Master"
   
-  var isMaster = true
+  var isMaster = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -85,6 +85,9 @@ class LogInViewController: UIViewController {
         else {
           print("Signed in successfully!")
           
+          if self.email == "diane@dbs.com" {
+            self.isMaster = true
+          }
           self.letsMoveOn()
         }
       })
