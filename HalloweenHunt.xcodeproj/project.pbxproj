@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59AEF821EF4C41AB5AC57A5E /* Pods_HalloweenHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A22FFE1CBCACC8D6E7D888 /* Pods_HalloweenHunt.framework */; };
+		2F5FEBC04EF0ACF2A3098BCD /* Pods_HalloweenHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556766B153C7B44F168A4855 /* Pods_HalloweenHunt.framework */; };
 		C40B44211DA3700900DC75D4 /* Haunter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B44201DA3700900DC75D4 /* Haunter.swift */; };
 		C40CBA9F1DA4B28100BFDC92 /* AddHaunterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CBA9E1DA4B28100BFDC92 /* AddHaunterViewController.swift */; };
 		C40CBAA11DA4BBF300BFDC92 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CBAA01DA4BBF300BFDC92 /* Player.swift */; };
@@ -21,12 +21,13 @@
 		C40ED06D1DA05CB3003131E6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED06C1DA05CB3003131E6 /* MapViewController.swift */; };
 		C40ED06F1DA05CC0003131E6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40ED06E1DA05CC0003131E6 /* MasterViewController.swift */; };
 		C40ED0731DA060F0003131E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40ED0721DA060F0003131E6 /* MapKit.framework */; };
-		C40ED0751DA0638E003131E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C40ED0741DA0638E003131E6 /* GoogleService-Info.plist */; };
+		C43D66C31E3D7F7600115F2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C43D66C21E3D7F7600115F2F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37F26DABC7A4FC8DA977FD4F /* Pods-HalloweenHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalloweenHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HalloweenHunt/Pods-HalloweenHunt.debug.xcconfig"; sourceTree = "<group>"; };
-		82A22FFE1CBCACC8D6E7D888 /* Pods_HalloweenHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HalloweenHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F90E1FA1D4BCEC783B436A6 /* Pods-HalloweenHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalloweenHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-HalloweenHunt/Pods-HalloweenHunt.release.xcconfig"; sourceTree = "<group>"; };
+		556766B153C7B44F168A4855 /* Pods_HalloweenHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HalloweenHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79AFC9822BA45743D94DFC6 /* Pods-HalloweenHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalloweenHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HalloweenHunt/Pods-HalloweenHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		C40B44201DA3700900DC75D4 /* Haunter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haunter.swift; sourceTree = "<group>"; };
 		C40CBA9E1DA4B28100BFDC92 /* AddHaunterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHaunterViewController.swift; sourceTree = "<group>"; };
 		C40CBAA01DA4BBF300BFDC92 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -42,9 +43,8 @@
 		C40ED06C1DA05CB3003131E6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C40ED06E1DA05CC0003131E6 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		C40ED0721DA060F0003131E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		C40ED0741DA0638E003131E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C41E228D1DA201B8001D21AC /* HalloweenHunt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HalloweenHunt.entitlements; sourceTree = "<group>"; };
-		ED98211B6DB31196D4ECDDB2 /* Pods-HalloweenHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalloweenHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-HalloweenHunt/Pods-HalloweenHunt.release.xcconfig"; sourceTree = "<group>"; };
+		C43D66C21E3D7F7600115F2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,22 +53,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40ED0731DA060F0003131E6 /* MapKit.framework in Frameworks */,
-				59AEF821EF4C41AB5AC57A5E /* Pods_HalloweenHunt.framework in Frameworks */,
+				2F5FEBC04EF0ACF2A3098BCD /* Pods_HalloweenHunt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		91A6BBA7F0E88B76971FE527 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				37F26DABC7A4FC8DA977FD4F /* Pods-HalloweenHunt.debug.xcconfig */,
-				ED98211B6DB31196D4ECDDB2 /* Pods-HalloweenHunt.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		C40B44221DA3701000DC75D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +76,7 @@
 				C40ED0561DA0425B003131E6 /* HalloweenHunt */,
 				C40ED0551DA0425B003131E6 /* Products */,
 				C40ED0711DA060EF003131E6 /* Frameworks */,
-				91A6BBA7F0E88B76971FE527 /* Pods */,
+				C53333BFDD96C1875FE4DFFB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +98,9 @@
 				C40ED0611DA0425B003131E6 /* Assets.xcassets */,
 				C40ED0631DA0425B003131E6 /* LaunchScreen.storyboard */,
 				C40ED0661DA0425B003131E6 /* Info.plist */,
-				C40ED0741DA0638E003131E6 /* GoogleService-Info.plist */,
 				C40ED05E1DA0425B003131E6 /* HalloweenHunt.xcdatamodeld */,
 				C41E228D1DA201B8001D21AC /* HalloweenHunt.entitlements */,
+				C43D66C21E3D7F7600115F2F /* GoogleService-Info.plist */,
 			);
 			path = HalloweenHunt;
 			sourceTree = "<group>";
@@ -129,9 +120,18 @@
 			isa = PBXGroup;
 			children = (
 				C40ED0721DA060F0003131E6 /* MapKit.framework */,
-				82A22FFE1CBCACC8D6E7D888 /* Pods_HalloweenHunt.framework */,
+				556766B153C7B44F168A4855 /* Pods_HalloweenHunt.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C53333BFDD96C1875FE4DFFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A79AFC9822BA45743D94DFC6 /* Pods-HalloweenHunt.debug.xcconfig */,
+				0F90E1FA1D4BCEC783B436A6 /* Pods-HalloweenHunt.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40ED0651DA0425B003131E6 /* LaunchScreen.storyboard in Resources */,
-				C40ED0751DA0638E003131E6 /* GoogleService-Info.plist in Resources */,
+				C43D66C31E3D7F7600115F2F /* GoogleService-Info.plist in Resources */,
 				C40ED0621DA0425B003131E6 /* Assets.xcassets in Resources */,
 				C40ED05D1DA0425B003131E6 /* Main.storyboard in Resources */,
 			);
@@ -254,7 +254,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -393,7 +393,7 @@
 		};
 		C40ED06A1DA0425B003131E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37F26DABC7A4FC8DA977FD4F /* Pods-HalloweenHunt.debug.xcconfig */;
+			baseConfigurationReference = A79AFC9822BA45743D94DFC6 /* Pods-HalloweenHunt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HalloweenHunt/HalloweenHunt.entitlements;
@@ -408,7 +408,7 @@
 		};
 		C40ED06B1DA0425B003131E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED98211B6DB31196D4ECDDB2 /* Pods-HalloweenHunt.release.xcconfig */;
+			baseConfigurationReference = 0F90E1FA1D4BCEC783B436A6 /* Pods-HalloweenHunt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HalloweenHunt/HalloweenHunt.entitlements;
